@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluded tax</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="123.js"></script>
+</head>
+<style>table,th,td{
+    border:1px solid black;
+}</style>
+<body>
+    
+    <h1 style="text-align: center; color: white; font-style: italic;"  >Excluded Tax Calculation</h1>
+  <table style="width:100%">
+    <th  style="width: 26.5%;">Price</th>
+    <th >Quantity</th>
+    <th >Tax(%)</th>
+    <th>Tax(Amt)</th>
+    <th>Tot_Amt</th>
+    <tr>
+        <td style="text-align: center"> <input type="text" id="firstNumber" /><br></td> 
+        <td style="text-align: center"> <input type="text" id="secondNumber" /><br></td>
+        <td style="text-align: center">  <input type="text" id="thirdnumber" /><br></td>
+               <td style="text-align: center"> <span id="result"></span></td>
+               <td style="text-align: center"> <span id="result2"></span></td>
+ 
+    </tr> 
+    
+  </table>
+ 
+  <form>
+    <input type="button" button style="width: 100%; height: 15vh; background-color: blue; color: white;text-decoration: none;text-align: center; "   onClick="multiplyBy()" Value="Result" /><br>
+</form>
+
+  <script>
+    function getvalue() {
+        let txt = document.getElementById("txt");
+        let txtvalue=txt.value;
+        let result = document.getElementById("result");
+        let result2 = document.getElementById("result2");
+        result.innerText=txtvalue;
+
+    }
+    
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        num3 = document.getElementById("thirdnumber").value;
+        document.getElementById("result").innerHTML = (num1 * num2)/(num3);
+        document.getElementById("result2").innerHTML = (num1*num2)+(num1 * num2)/(num3);
+}
+
+function divideBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+       
+  </script>
+  <a href="yyd.html" style="color: rgb(30, 76, 202);"  >Go to GST Chart from JR's Shop</a>
+</body>
+</html>
